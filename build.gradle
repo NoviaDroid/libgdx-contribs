@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {      
+        classpath 'com.android.tools.build:gradle:1.0.0'       
+    }
+}
+
+allprojects {
+    
+    version = '1.0'
+    ext {
+        appName = 'postprocessing'
+        gdxVersion = '1.5.3'       
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+    }
+}
+
+project(":postprocessing-demo") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile project(":postprocessing")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    }
+}
+
+project(":postprocessing") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile project(":utils")
+    }
+}
+
+project(":utils") {
+    apply plugin: "java"
+
+    dependencies {
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"       
+    }
+}
