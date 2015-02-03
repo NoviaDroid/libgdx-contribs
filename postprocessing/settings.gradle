@@ -1,0 +1,2 @@
+include 'postprocessing''utils'
+project(':utils').projectDir = new File("f:/libgdx-contribs/utils/")

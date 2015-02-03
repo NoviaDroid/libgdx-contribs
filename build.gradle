@@ -40,6 +40,7 @@ project(":postprocessing") {
 
     dependencies {
         compile project(":utils")
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
     }
 }
 

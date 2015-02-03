@@ -29,7 +29,6 @@ target/
 /postprocessing-demo/build/resources/main/data/skin/uiskin.png
 /postprocessing-demo/build/resources/main/data/skin/white.png
 /postprocessing-demo/postprocessing-demo.iml
-/postprocessing/build.gradle
 /postprocessing/build/libs/postprocessing-1.0.jar
 /postprocessing/build/resources/main/shaders/blur.fragment
 /postprocessing/build/resources/main/shaders/blur.vertex
